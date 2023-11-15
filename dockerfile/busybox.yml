@@ -1,0 +1,6 @@
+FROM busybox
+RUN adduser -D -u 1001 nonrootuser
+USER 1001
+
+
+CMD ["sh", "-c", "while true; do sleep 3600; done"]
